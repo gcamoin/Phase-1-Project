@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cocktailName = document.getElementById('search').value
         // console.log(cocktailName)
 
-        fetch(`http://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`)
+        fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktailName}`)
         .then(function (response) {
             return response.json();
         })
@@ -20,12 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
             h2.innerText = eachDrink.strDrink
             const cocktailCard = document.createElement('div')
             const cocktailImg = document.createElement('img')
+            cocktailImg.setAttribute('id', 'img')
             cocktailImg.src = eachDrink.strDrinkThumb
             const cardLikes = document.createElement('p')
-            const cardButton = document.createElement('button')
+            const likeButton = document.createElement('button')
+
             cardButton.textContent = 'Like'
            //Append Elements to Cocktail Card
-           cocktailCard.append(h2, cocktailImg, cardButton, cardLikes)
+           cocktailCard.append(h2, cocktailImg, likeButton, cardLikes)
            const cocktailContainer = document.getElementById('cocktail-container') 
            cocktailContainer.appendChild(cocktailCard)
 

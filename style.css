@@ -1,8 +1,26 @@
 h1 {
     text-align: center;
+    
 }
 
-form {
-    text-align: center
+#cocktail-form {
+    text-align: left;
+    margin-bottom: 10%;
     
+    
+     
+    
+}
+
+h2 {
+    text-align: center;
+}
+
+#img {
+    right: 0px;
+    left: 0px;
+    margin: auto;
+    display: block;
+    position: relative;
+    margin-bottom: 10%;
 }
