@@ -1,3 +1,5 @@
+let count = 1
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const cocktailForm = document.getElementById('cocktail-form')
@@ -22,14 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const cocktailImg = document.createElement('img')
             cocktailImg.setAttribute('id', 'img')
             cocktailImg.src = eachDrink.strDrinkThumb
-            const cardLikes = document.createElement('p')
             const likeButton = document.createElement('button')
-
-            cardButton.textContent = 'Like'
+            likeButton.setAttribute('class', 'btn')
+            
            //Append Elements to Cocktail Card
-           cocktailCard.append(h2, cocktailImg, likeButton, cardLikes)
+           cocktailCard.append(h2, cocktailImg, likeButton)
            const cocktailContainer = document.getElementById('cocktail-container') 
            cocktailContainer.appendChild(cocktailCard)
+
+           //Liking Drink Event Listener
+           likeButton.addEventListener('click', () => {
+               
+                likeButton.innerText = count++
+           })
 
         })
 
