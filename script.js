@@ -26,16 +26,31 @@ document.addEventListener('DOMContentLoaded', () => {
             cocktailImg.src = eachDrink.strDrinkThumb
             const likeButton = document.createElement('button')
             likeButton.setAttribute('class', 'btn')
+            const likeButtonDiv = document.createElement('div')
+            const likeButtonP = document.createElement('p')
+            likeButtonDiv.append(likeButton, likeButtonP)
+            likeButton.innerText = 'Like'
+            
             
            //Append Elements to Cocktail Card
-           cocktailCard.append(h2, cocktailImg, likeButton)
+           cocktailCard.append(h2, cocktailImg, likeButtonDiv)
            const cocktailContainer = document.getElementById('cocktail-container') 
            cocktailContainer.appendChild(cocktailCard)
 
+           
            //Liking Drink Event Listener
            likeButton.addEventListener('click', () => {
-               
-                likeButton.innerText = count++
+                likeButtonP.innerText++
+                
+           })
+           //Cocktail Card Hover
+           cocktailImg.addEventListener('mouseover', (e) => {
+            
+            const h3 = document.createElement('h')
+            h3.innerText = "Directions"
+            const drinkDir = document.createElement('p')
+            drinkDir.textContent = eachDrink.strInstructions
+            cocktailCard.appendChild(drinkDir, h3)
            })
 
         })
@@ -52,10 +67,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     
-
-
-
-
-
 
 })

@@ -1,26 +1,44 @@
 h1 {
     text-align: center;
+    background-color: rgb(14, 162, 221) ;
+    color: red;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
     
-}
+    
+    }
+    
+
 
 #cocktail-form {
     text-align: left;
-    margin-bottom: 10%;
-    
-    
-     
+    margin-bottom: 5%;
     
 }
 
-h2 {
-    text-align: center;
+h2 { text-align: center;
 }
 
 #img {
-    right: 0px;
+    right: 0px;S
     left: 0px;
     margin: auto;
     display: block;
     position: relative;
     margin-bottom: 10%;
+}
+
+#cocktail-form {
+    background-color:red;
+}
+
+#cocktail-container {
+    background-color:white;
+}
+
+#header-image {
+    max-width: 12%;
+    max-height: auto;
+    display: block;
+    
+   
 }
