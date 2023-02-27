@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         array.forEach((eachDrink) => {
             //Create Cocktail Card
             const h2 = document.createElement('h2')
+            h2.setAttribute('id', 'h2')
             h2.innerText = eachDrink.strDrink
             const cocktailCard = document.createElement('div')
             const cocktailImg = document.createElement('img')
@@ -46,12 +47,36 @@ document.addEventListener('DOMContentLoaded', () => {
            //Cocktail Card Hover
            cocktailImg.addEventListener('mouseover', (e) => {
             
-            const h3 = document.createElement('h')
-            h3.innerText = "Directions"
+            const h3 = document.createElement('h3')
+            h3.setAttribute('id', 'h3')
+            h3.textContent = "Directions"
             const drinkDir = document.createElement('p')
+            drinkDir.setAttribute('id', 'drinkDir')
             drinkDir.textContent = eachDrink.strInstructions
-            cocktailCard.appendChild(drinkDir, h3)
-           })
+            
+            const h4 = document.createElement('h4')
+            h4.setAttribute('id', 'h4')
+            h4.textContent = 'Ingredients'
+            cocktailCard.append(h4)
+            
+            for(let i=1; i<16; i++){
+                let ingredient = document.createElement('p')
+                ingredient.setAttribute('id', 'ingredientList')
+                console.log(i)
+                ingredient.innerHTML = eachDrink[`strIngredient${i}`]
+                cocktailCard.append(ingredient)
+                cocktailCard.append(h3, drinkDir)
+                
+                //Cocktailcard Mouseout Event
+                cocktailImg.addEventListener('mouseout', () => {
+                    drinkDir.remove();
+                    h3.remove();
+                    ingredient.remove()
+                    h4.remove();
+                })
+            }
+        })
+
 
         })
 

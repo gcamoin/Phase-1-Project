@@ -1,9 +1,8 @@
 h1 {
     text-align: center;
     background-color: rgb(14, 162, 221) ;
-    color: red;
+    color: rgb(22, 243, 33);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
-    
     
     }
     
@@ -15,7 +14,8 @@ h1 {
     
 }
 
-h2 { text-align: center;
+#h2 { text-align: center;
+      margin-top: 8%;
 }
 
 #img {
@@ -24,7 +24,7 @@ h2 { text-align: center;
     margin: auto;
     display: block;
     position: relative;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
 }
 
 #cocktail-form {
@@ -40,5 +40,23 @@ h2 { text-align: center;
     max-height: auto;
     display: block;
     
-   
+}
+
+#h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    text-align: left;
+    text-decoration: underline;
+}
+
+#ingredientList {
+    text-align: center;
+}
+
+#h4 {
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    text-decoration: underline;
+    
 }
